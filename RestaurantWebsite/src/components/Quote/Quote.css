@@ -1,0 +1,9 @@
+.quote-text {
+    font-weight: bold;
+    font-size: 20px; 
+  }
+  .writer-name{
+    padding-top: 5px;
+    font-style: italic;
+    font-size: medium;
+  }

@@ -1,0 +1,42 @@
+.center{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.quote-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+}
+  
+  .quotes-container {
+    max-width: 800px; 
+    padding: 20px;
+  }
+  
+  .quote-wrapper {
+    margin-bottom: 20px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+  }
+  
+  .quote-wrapper:last-child {
+    margin-bottom: 0; 
+  }
+  .footer {
+   display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    font-weight: 600;
+  }
+  
+  
+ 
+  

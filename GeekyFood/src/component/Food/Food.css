@@ -1,0 +1,133 @@
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+
+.info h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.info p {
+  font-size: 14px;
+  color: #888;
+}
+
+
+.recipe {
+  display: none;
+  margin-top: 10px;
+}
+
+
+.card:hover .recipe {
+  display: block;
+}
+
+.recipe h2 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.recipe p {
+  font-size: 14px;
+  color: #555;
+}
+
+.recipe img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+.recipe a {
+  display: block;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.recipe a:hover {
+  color: #0056b3;
+}
+
+.loading {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+
+.no-results {
+  text-align: center;
+  color: #888;
+}
+
+
+.merge {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  gap: 20px;
+}
+
+.searchBox {
+  margin-bottom: 20px;
+}
+
+.search-btn {
+  width: 200px; 
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filters select {
+  width: 200px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
