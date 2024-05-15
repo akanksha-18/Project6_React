@@ -1,6 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
 import FoodItem from './FoodItem'; 
 import './Food.css'; 
+import { Routes, Route, Link } from 'react-router-dom';
 
 const Food = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -61,42 +63,40 @@ const Food = () => {
 
   return (
     <div className='main'>
-  <div className='heading'>
-    <h1>Search your Food Recipe</h1>
-  </div>
-  <div className="merge">
-    <div className="searchBox">
-      <input
-        type="search"
-        className='search-btn'
-        placeholder='Enter food name'
-        value={searchTerm}
-        onChange={handleSearchChange}
-      />
-    </div>
-    <div className="filters">
-      <select value={selectedCountry} onChange={handleCountryChange}>
-        <option value="">All Cuisines</option>
-        {uniqueCountries.map((country, index) => (
-          <option key={index} value={country}>{country}</option>
+      <div className='merge'>
+        <div className='searchBox'>
+          <input
+            type='search'
+            className='search-btn'
+            placeholder='Enter food name'
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
+        </div>
+        <div className='filters'>
+          <select value={selectedCountry} onChange={handleCountryChange}>
+            <option value=''>All Cuisines</option>
+            {uniqueCountries.map((country, index) => (
+              <option key={index} value={country}>{country}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+      <div className='container'>
+        {isLoading && <div className='loading'>Loading...</div>}
+        {filteredResults.length === 0 && !isLoading && (
+          <div className='no-results'>No results found.</div>
+        )}
+        {filteredResults.map(meal => (
+          <Link key={meal.idMeal} to={`/recipe/${meal.idMeal}`}>
+            <FoodItem data={meal} />
+          </Link>
         ))}
-      </select>
+      </div>
     </div>
-  </div>
-  <div className='container'>
-    {isLoading && <div className="loading">Loading...</div>}
-    {filteredResults.length === 0 && !isLoading && (
-      <div className="no-results">No results found.</div>
-    )}
-    {filteredResults.map(meal => (
-      <FoodItem key={meal.idMeal} data={meal} />
-    ))}
-  </div>
-</div>
   );
 }
 
 export default Food;
-
 
 

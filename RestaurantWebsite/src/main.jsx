@@ -9,6 +9,7 @@ import QuotePage from './components/QuotePage/QuotePage.jsx'
 import Food from "./components/Food/Food.jsx"
 import Restaurant from './components/Restaurant/Restaurant.jsx';
 import ContactUs from './components/ContactUs/ContactUs.jsx'
+import RecipePage from './components/Food/RecipePage.jsx';
 
 const router=createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout/>}>
@@ -17,6 +18,7 @@ const router=createBrowserRouter(createRoutesFromElements(
   <Route path='restaurant' element={<Restaurant/>}/>
   <Route path='food' element={<Food/>}/>
   <Route path='contactus' element={<ContactUs/>}/>
+  <Route path="recipe/:id" element={<RecipePage />} />
   </Route>
 ))
 
